@@ -19,7 +19,7 @@ class ModelTests(TestCase):
     def test_normalize_user_email(self):
         """Test that email gets normalized to lowercase when creating user"""
         email = 'test@MIKE.COM'
-        user = get_user_model().objects.create_user(email,'1password')
+        user = get_user_model().objects.create_user(email, '1password')
 
         self.assertEqual(user.email, email.lower())
 
